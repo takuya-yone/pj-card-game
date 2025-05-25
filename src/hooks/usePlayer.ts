@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Player } from "../models/Player";
-import { Deck } from "../models/Deck";
+import { Player } from "@/models/Player";
+import { Deck } from "@/models/Deck";
 
 export const usePlayer = () => {
   const [player, setPlayer] = useState<Player>(new Player([]));

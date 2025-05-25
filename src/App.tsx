@@ -1,5 +1,5 @@
-import { useGameField } from "./hooks/useGameField";
-import "./App.css";
+import { useGameField } from "@/hooks/useGameField";
+import "@/App.css";
 
 function App() {
   const { deck, shuffle, player, draw, multiDraw, reset } = useGameField();

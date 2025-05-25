@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Deck } from "../models/Deck";
+import { Deck } from "@/models/Deck";
 
 export const useDeck = () => {
   const [deck, setDeck] = useState<Deck>(new Deck());

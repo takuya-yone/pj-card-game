@@ -1,5 +1,5 @@
-import { useDeck } from "./useDeck";
-import { usePlayer } from "./usePlayer";
+import { useDeck } from "@/hooks/useDeck";
+import { usePlayer } from "@/hooks/usePlayer";
 
 export const useGameField = () => {
   const { deck, shuffle, reset: resetDeck } = useDeck();
