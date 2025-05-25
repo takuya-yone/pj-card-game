@@ -8,10 +8,10 @@ export class Deck {
       this.cards = cards;
       return;
     }
-    this.cards = this.initDeck(40);
+    this.cards = this.initCards(40);
   }
 
-  initDeck = (num: number) => {
+  initCards = (num: number) => {
     return Array.from({ length: num }, () => new Card());
   };
 

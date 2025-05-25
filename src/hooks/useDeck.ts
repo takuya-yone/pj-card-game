@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Deck } from "../models/Deck";
 
-export const useDecks = () => {
+export const useDeck = () => {
   const [deck, setDeck] = useState<Deck>(new Deck());
 
   useEffect(() => {}, [deck]);
@@ -30,6 +30,7 @@ export const useDecks = () => {
 
   return {
     deck,
+    setDeck,
     draw,
     multiDraw,
     shuffle,

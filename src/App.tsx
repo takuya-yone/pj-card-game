@@ -1,10 +1,8 @@
-import { useDecks } from "./hooks/useDecks";
-import { usePlayer } from "./hooks/usePlayer";
+import { useGameField } from "./hooks/useGameField";
 import "./App.css";
 
 function App() {
-  const { deck, shuffle, reset: deckReset } = useDecks();
-  const { player, draw, multiDraw, reset: playerReset } = usePlayer();
+  const { deck, shuffle, player, draw, multiDraw, reset } = useGameField();
 
   return (
     <>
@@ -13,14 +11,7 @@ function App() {
       <button onClick={() => draw(deck)}>draw</button>
       <button onClick={() => multiDraw(deck, 3)}>multiDraw</button>
       <button onClick={() => shuffle()}>shuffle</button>
-      <button
-        onClick={() => {
-          deckReset();
-          playerReset();
-        }}
-      >
-        reset
-      </button>
+      <button onClick={() => reset()}>reset</button>
       <p>{player.cards.length}</p>
       <p>{JSON.stringify(player.cards)}</p>
     </>

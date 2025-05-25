@@ -26,6 +26,7 @@ export const usePlayer = () => {
 
   return {
     player,
+    setPlayer,
     draw,
     multiDraw,
     reset,
