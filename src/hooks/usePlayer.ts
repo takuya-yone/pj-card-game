@@ -3,7 +3,7 @@ import { Player } from '@/models/Player'
 import { Deck } from '@/models/Deck'
 
 export const usePlayer = () => {
-	const [player, setPlayer] = useState<Player>(new Player([]))
+	const [player, setPlayer] = useState<Player>(new Player([], []))
 
 	useEffect(() => {}, [player])
 
