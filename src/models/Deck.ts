@@ -3,12 +3,12 @@ import { Card } from '@/models/Card'
 export class Deck {
 	cards: Card[] = []
 
-	constructor(cards?: Card[]) {
+	constructor(cards?: Card[], num?: number) {
 		if (cards) {
 			this.cards = cards
 			return
 		}
-		this.cards = this.initCards(40)
+		this.cards = this.initCards(num ?? 40)
 	}
 
 	initCards = (num: number) => {
