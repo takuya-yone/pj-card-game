@@ -1,7 +1,7 @@
 import { useGameField } from '@/hooks/useGameField'
 import '@/App.css'
-import { Button } from '@/components/ui/button'
 import { CardView } from '@/components/cardView'
+import { UserActionButton } from './components/userActionButton'
 
 function App() {
 	const { deck, shuffle, player, draw, multiDraw, reset } = useGameField()
@@ -14,27 +14,15 @@ function App() {
 					<p>{deck.cards.length}</p>
 					<CardView cards={deck.cards} />
 				</div>
-				<div className="inline-flex">
-					<div className="p-1">
-						<Button className="bg-amber-200" onClick={() => draw()}>
-							draw
-						</Button>
-					</div>
-					<div className="p-1">
-						<Button className="bg-amber-200" onClick={() => multiDraw(3)}>
-							multiDraw
-						</Button>
-					</div>
-					<div className="p-1">
-						<Button className="bg-amber-200" onClick={() => shuffle()}>
-							shuffle
-						</Button>
-					</div>
-					<div className="p-1">
-						<Button className="bg-amber-200" onClick={() => reset()}>
-							reset
-						</Button>
-					</div>
+				<div className="inline-flex pt-10 p-3">
+					<UserActionButton action="draw" onClick={() => draw()} className="px-4" />
+					<UserActionButton
+						action="multiDraw"
+						onClick={() => multiDraw(3)}
+						className="px-4"
+					/>
+					<UserActionButton action="shuffle" onClick={() => shuffle()} className="px-4" />
+					<UserActionButton action="reset" onClick={() => reset()} className="px-4" />
 				</div>
 				<div className="bg-blue-100 p-2 rounded-lg mt-4">
 					<p>{player.cards.length}</p>
